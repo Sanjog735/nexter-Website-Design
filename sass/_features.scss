@@ -1,0 +1,30 @@
+.features {
+  grid-column: center-start / center-end;
+
+  margin: 15rem 0;
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  // auto-fit : fit the content in a specefic width here in this case we define minmax function so that it will first occupy 1fr untill 250px width if the width is less then 25rem then  it will increase the rows and fit the content
+
+  grid-gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: translateY(-1rem);
+  }
+  &__text {
+    font-size: 1.7rem;
+    grid-column: 2/3;
+  }
+}
